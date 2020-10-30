@@ -1,6 +1,8 @@
 //#region Definición de tipos creados por el usuario (clases, enumeraciones, ...)
 /**
  * Definición de una clase
+ * 
+ * Otras clases pueden EXTENDER / HEREDAR esta clase
  */
 class Clase {
     public propiedadNumero: number;
@@ -9,6 +11,9 @@ class Clase {
     public propiedadArray: Array<any>; // Array<any> es lo mismo que any[]
     // una tupla es un array con un número fijo de elementos y que pueden ser de distinto tipo
     public propiedadTupla: [number, string];
+    // un mapa es una lista de pares clave-valor, es decir, un objeto js plano, pero con los tipos
+    // predefinidos tanto de las claves como de los valores
+    public propiedadMapa?: Map<string, any>;
     public propiedadOpcional?: any;
     public propiedadFuncion: (arg: any) => (any);
     // sólo accesible desde una instancia de la clase Clase
@@ -38,4 +43,35 @@ class Clase {
 enum Enum {
     A, B, C, D,
 }
+
+/**
+ * Definición de una interfaz
+ * 
+ * Las clases pueden IMPLEMENTAR una interfaz
+ * Una interfaz define un estándar que deberán seguir las clases que la implementen
+ * Los métodos se implementan en la clase
+ */
+interface Interface {
+
+    metodo1(arg0: any): void;
+}
+
+// Ejemplo de interfaz implementada
+class ClaseImplementaInterface implements Interface {
+
+    metodo1(arg0: any): void {
+        // Los error y excepciones los veremos más adelante (si fuera necesario)
+        throw new Error("Method not implemented.");
+    }
+
+}
+
+/**
+ * Definición de alias de tipos exitentes
+ */
+type Numero = number;
+type Cadena = string;
+type NumeroYCadena = number & string;
+type NumeroOBooleano = number | boolean;
+type MapaClaveStringValorNumero = Map<string, number>;
 //#endregion
