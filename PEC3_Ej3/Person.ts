@@ -6,70 +6,64 @@ export class Person {
   private surname: string;
   private nick: string;
   birthday: Date;
-  country: Country[];
+  //country: Country;
   salary: number;
   cancellationClause: number;
   contractYears: number;
-  team: Team[];
+  //team: Team[];
 
   constructor(
     name: string,
     surname: string,
     nick: string,
     birthday: Date,
-    country: Country[],
+    //country: Country,
     salary: number,
     cancellationClause: number,
     contractYears: number,
-    team: Team[]
+    //team: Team[]
   ) {
     this.name = name;
     this.surname = surname;
     this.nick = nick;
     this.birthday = birthday;
-    this.country = country;
+    //this.country = country;
     this.salary = salary;
     this.cancellationClause = cancellationClause;
     this.contractYears = contractYears;
-    this.team = team;
+    //this.team = team;
   }
 
-  getName() {
+  getName(): string {
     return this.name;
   }
-  setName(name: string) {
+  setName(name: string): string {
     return (this.name = name);
   }
-  getSurName() {
+  getSurName(): string {
     return this.surname;
   }
-  setSurName(surname: string) {
+  setSurName(surname: string): string {
     return (this.surname = surname);
   }
-  getNick() {
+  getNick(): string {
     return this.nick;
   }
-  setNick(nick: string) {
+  setNick(nick: string): string {
     return (this.nick = nick);
   }
-  getBirthday() {
+  getBirthday(): Date {
     return this.birthday;
   }
-  setBirthday(birthday: Date) {
+  setBirthday(birthday: Date): Date {
     return (this.birthday = birthday);
   }
-  getCountry() {
-    return this.country;
-  }
-  setCountry(country: Country[]) {
-    return (this.country = country);
-  }
-  getTeam() {
-    return this.team;
-  }
-  setTeam(team: Team[]) {
-    return (this.team = team);
-  }
+
+  getCountry() {}
+  setCountry() {}
+  getTeam() {}
+  setTeam() {}
+
   toString(): string {
     return "";
   }
