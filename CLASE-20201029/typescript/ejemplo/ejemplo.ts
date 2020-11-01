@@ -1,5 +1,5 @@
-import { Equipo } from './equipo';
-import { LetraDivision } from './letra-division.enum';
+import { Equipo } from "./equipo";
+import { LetraDivision } from "./letra-division.enum";
 import { Club } from "./club";
 import { Liga } from "./liga";
 import { Estadio } from "./estadio";

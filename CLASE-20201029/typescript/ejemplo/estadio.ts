@@ -1,3 +1,3 @@
 export class Estadio {
-    nombre: string;
+  nombre: string;
 }

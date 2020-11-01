@@ -1,3 +1,4 @@
 export enum LetraDivision {
-    A, B
+  A,
+  B,
 }
