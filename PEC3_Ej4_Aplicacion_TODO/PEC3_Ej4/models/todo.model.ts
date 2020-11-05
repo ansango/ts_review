@@ -5,19 +5,17 @@
  */
 
 interface TodoInterface {
-  text: string;
-  complete: boolean;
+  text?: string;
+  complete?: boolean;
 }
 
-export class Todo {
+export class Todo implements TodoInterface {
   id: string;
   text: string;
   complete: boolean;
   props: TodoInterface;
 
-  // ?  constructor({ text, complete } = { complete: false })
-
-  constructor({ text, complete }: TodoInterface) {
+  constructor({ text, complete }: TodoInterface = { complete: false }) {
     this.id = this.uuidv4();
     this.text = text;
     this.complete = complete;
