@@ -2,6 +2,7 @@ import { Person } from "./Person";
 import { Country } from "./Country";
 import { Team } from "./Team";
 import { Position } from "./Position";
+import { Training } from "./Training";
 
 export class Player extends Person {
   number: number;
@@ -10,17 +11,19 @@ export class Player extends Person {
   numInternational: number = 0;
   position: Position;
   injuredWeeks: number = 0;
+  team: Team;
+  training: Training;
 
   constructor(
     name: string,
     surName: string,
     nick: string,
     birthday: Date,
-    //country: Country, // ? duda enum
+    country: Country,
     salary: number,
     cancellationClause: number,
     contractYears: number,
-    //team: Team[],
+    team: Team,
     number: number,
     height: number,
     weight: number,
@@ -33,11 +36,10 @@ export class Player extends Person {
       surName,
       nick,
       birthday,
-      //country,
+      country,
       salary,
       cancellationClause,
       contractYears
-      //team
     );
 
     this.number = number;
@@ -45,6 +47,7 @@ export class Player extends Person {
     this.weight = weight;
     this.position = position;
     this.numInternational = numInternational;
+    this.team = team;
   }
 
   getNumber(): number {
@@ -60,14 +63,22 @@ export class Player extends Person {
     return (this.numInternational = numInternational);
   }
 
-  // TODO: 
-  getPosition() {}
-  setPosition() {}
+  // TODO:
+  getPosition(): Position {
+    return this.position;
+  }
+  setPosition(position: Position): Position {
+    return (this.position = position);
+  }
   isInjured() {}
   getInjuredWeeks() {}
   setInjuredWeeks() {}
-  getTraining() {}
-  setTraining() {}
+  getTraining(): Training {
+    return this.training;
+  }
+  setTraining(training: Training): Training {
+    return (this.training = training);
+  }
 
   toString(): string {
     return "";
