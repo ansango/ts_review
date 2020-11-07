@@ -1,4 +1,5 @@
 import { Country } from "./Country";
+import { Team } from "./Team";
 
 export class Person {
   private name: string;
@@ -9,6 +10,7 @@ export class Person {
   salary: number;
   cancellationClause: number;
   contractYears: number;
+  team: Team;
 
   constructor(
     name: string,
@@ -18,7 +20,7 @@ export class Person {
     country: Country,
     salary: number,
     cancellationClause: number,
-    contractYears: number
+    contractYears: number,
   ) {
     this.name = name;
     this.surname = surname;
@@ -55,10 +57,18 @@ export class Person {
     return (this.birthday = birthday);
   }
 
-  getCountry() {}
-  setCountry() {}
-  getTeam() {}
-  setTeam() {}
+  getCountry(): Country {
+    return this.country;
+  }
+  setCountry(country: Country): Country {
+    return (this.country = country);
+  }
+  getTeam(): Team {
+    return this.team;
+  }
+  setTeam(team: Team): Team {
+    return (this.team = team);
+  }
 
   toString(): string {
     return "";

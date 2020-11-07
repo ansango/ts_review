@@ -27,9 +27,7 @@ export class Player extends Person {
     number: number,
     height: number,
     weight: number,
-    position: Position,
-    numInternational: number,
-    injuredWeeks: number
+    numInternational: number
   ) {
     super(
       name,
@@ -45,7 +43,6 @@ export class Player extends Person {
     this.number = number;
     this.height = height;
     this.weight = weight;
-    this.position = position;
     this.numInternational = numInternational;
     this.team = team;
   }
@@ -63,16 +60,21 @@ export class Player extends Person {
     return (this.numInternational = numInternational);
   }
 
-  // TODO:
   getPosition(): Position {
     return this.position;
   }
   setPosition(position: Position): Position {
     return (this.position = position);
   }
-  isInjured() {}
-  getInjuredWeeks() {}
-  setInjuredWeeks() {}
+  isInjured(): boolean {
+    return this.injuredWeeks > 0 ? true : false;
+  }
+  getInjuredWeeks(): number {
+    return this.injuredWeeks;
+  }
+  setInjuredWeeks(injuredWeeks: number) {
+    return (this.injuredWeeks = injuredWeeks);
+  }
   getTraining(): Training {
     return this.training;
   }
