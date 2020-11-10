@@ -25,3 +25,5 @@ export class Todo implements TodoInterface {
     return Date.now().toString();
   }
 }
+
+export type Todos = Todo[];
