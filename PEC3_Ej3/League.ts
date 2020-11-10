@@ -1,6 +1,6 @@
-import { Country } from "./Country";
-import { Team } from "./Team";
-export class League {
+import Country from "./Country";
+import Team from "./Team";
+export default class League {
   private shortName: string;
   private longName: string;
   country: Country;

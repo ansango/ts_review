@@ -1,6 +1,6 @@
-import { Player } from "./Player";
-import { League } from "./League";
-export class Team {
+import Player from "./Player";
+import League from "./League";
+export default class Team {
   private shortName: string;
   private longName: string;
   private imgSrc: string;

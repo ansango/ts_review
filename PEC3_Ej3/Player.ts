@@ -1,10 +1,10 @@
-import { Person } from "./Person";
-import { Country } from "./Country";
-import { Team } from "./Team";
-import { Position } from "./Position";
-import { Training } from "./Training";
+import  Person  from "./Person";
+import  Country  from "./Country";
+import  Team  from "./Team";
+import  Position  from "./Position";
+import  Training  from "./Training";
 
-export class Player extends Person {
+export default class Player extends Person {
   number: number;
   height: number;
   weight: number;

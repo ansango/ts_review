@@ -1,7 +1,7 @@
-import { Country } from "./Country";
-import { Team } from "./Team";
+import Country from "./Country";
+import Team from "./Team";
 
-export class Person {
+export default class Person {
   private name: string;
   private surname: string;
   private nick: string;
@@ -20,7 +20,7 @@ export class Person {
     country: Country,
     salary: number,
     cancellationClause: number,
-    contractYears: number,
+    contractYears: number
   ) {
     this.name = name;
     this.surname = surname;

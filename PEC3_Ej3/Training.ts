@@ -1,6 +1,6 @@
-import { Player } from "./Player";
+import Player from "./Player";
 
-export class Training {
+export default class Training {
   private numWeeks: number = 0;
   player: Player;
 
